@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카피 에어비앤비</title>
+    
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css' rel='stylesheet' >
+       <style>
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        html body {margin: 0; padding: 0; }
+        ul li {list-style: none; display: inline-block;}
+        li {list-style: none;}
+        a {color: unset;}
+        i {color: white; font-size: 30px;
+            margin-left: 3%;}
+        /*박스 1, 745 반응형*/
+        .box1 {background-color: black; height: 1500px;}
+        .top {background-color: rgb(36, 36, 36); text-align: center;
+            text-decoration: underline;
+            line-height: 30px;
+            font-size: 0.8vw;
+        font-weight: bold; color: rgb(163, 163, 163); padding: 10px 0 10px 0;}
+        .logo {
+            margin-right: 25%; font-size: 20px; color: white;
+            font-family: 'GmarketSansMedium';
+}
+        .right_menu_start {color: white; font-weight: bold;  margin-left: 10%;   float: left;}
+        .right_menu1 {color: white;  float: left; margin-left: 2%;}
+        .right_menu2 {color: white;  float: left; margin-left: 1.5%; margin-top: -1%;}
+        .center {
+            text-align: center;
+        }
+        .center>img {
+            margin-top: 5%;
+            border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+        }
+        /*클릭탭메뉴*/
+                .tabmenu{ 
+                max-width:500px; 
+                margin: 0 auto;
+                position:relative;
+                }
+                .tabmenu ul li{
+                display:  inline-block;
+                /*width:33.33%;*/
+                width: 20%;
+                float:left;
+                /*text-align:center;*/
+                color: white;
+                /*line-height:40px;*/
+                
+                }
+                .tabmenu label{
+                display:block;
+                width:100%; 
+                }
+                .tabmenu input{display:none; }
+                .tabCon{
+                display:none;
+                text-align:left;
+                left: -30%;
+                padding-top: 20px;
+                /*top:40px;*/
+                position:absolute;
+                box-sizing: border-box; 
+                /*수정*/
+                }
+                .tabmenu input:checked ~ label{
+                    text-decoration: underline;
+                    text-underline-position: under;
+                    
+
+                }
+                .tabmenu input:checked ~ .tabCon{
+                display:unset;
+                }
+        /*box2*/
+        .box2 {height: 1500px; background-color: white; position: relative;}
+        .box2_1 {width: 15%; background-color: rgb(49, 49, 19);  float: left;  border-radius: 50%; background-color: turquoise;
+        height: 1000px;}
+        .box2_2 {width: 15%; background-color: rgb(49, 49, 19);  float: left;}
+        .box2_3 {width: 15%; background-color: rgb(49, 49, 19);  float: left;}
+        .box2_4 {width: 15%; background-color: rgb(49, 49, 19);  float: left;}
+        .h1 {margin: 100px; font-size: 3vw; position: static;}
+    
+        
+        @media screen and (min-width:746px) and (max-width:6000px) {
+            .search_btn { display: none;}
+            .search {display: none;}
+            h1 {visibility: hidden;}
+            .h1 {visibility: unset;}
+
+        }
+        @media screen and (min-width:50px) and (max-width:745px) {
+            nav {display: none;}
+            .box1 {height: 830px;}
+            .center>img {display: none;}
+            .center {background-image: url(./img/mobile.jpg);
+                background-repeat: no-repeat;
+                height: 1500px;
+                background-size: 100% auto;
+            }
+            h1 {color: white; position: absolute; top: 45%; left: 15%; font-size: 5vw; }
+            .h1 { font-size: 30px; color: black; padding-top: 10%;}
+            .search {background-color:  white;  text-align: center; 
+                border-bottom-left-radius: 25px;
+                border-top-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                border-top-right-radius: 25px;
+                color: rgb(51, 51, 51);
+                font-weight: bold;
+                margin: 0 5% 0 5%;
+                padding: 15px 20px 15px 20px;
+
+            }
+            .search_btn {padding: 15px 20px 15px 20px;
+                font-weight: bold;
+                border-bottom-left-radius: 25px;
+                border-top-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+                border-top-right-radius: 25px;
+                color: palevioletred;
+             
+            }
+
+            .box2_1 {float: unset;}
+            .box2_2 {float: unset;}
+            .box2_3 {float: unset;}
+            .box2_4 {float: unset;}
+    
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box1">
+    <div class="top">에어비앤비의 코로나 19 대응 방안에 대한 최신 정보를 확인하세요.</div>
+    <nav>
+        <ul>
+            <i class="fab fa-airbnb"></i>
+         <li class="logo">airbnb</li>
+        <!--시작-->
+        <div class="tabmenu">
+            <ul>
+              <li id="tab1" class="btnCon"> <input type="radio" checked name="tabmenu" id="tabmenu1">
+                <label for="tabmenu1">숙소</label>
+                <br>
+                <div class="tabCon">
+                    <img src="./img/search_menu.png">
+                </div>
+                <br>
+                <br>
+                
+              </li>
+              <li id="tab2" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu2">
+                <label for="tabmenu2">체험</label>
+                <br>
+                <div class="tabCon">
+                    <img src="./img/search_menu.png">
+                </div>
+                <br>
+                <br>
+
+                
+              </li>    
+              <li id="tab3" class="btnCon"><input type="radio" name="tabmenu" id="tabmenu3">
+                <label for="tabmenu3">온라인체험</label>
+                <div class="tabCon"></div>
+              </li>
+            </ul>
+
+            
+          </div>
+
+        <!--종료-->
+        <a href="#"><li class="right_menu_start">호스트 되기</li></a>
+        <a href="#"><li class="right_menu1"><i class="fas fa-globe-americas" style="font-size: 20px;"></i></li></a>
+        <a href="#"><li class="right_menu2"><img src="./img/user.png"></li></a>
+        </ul>
+    
+    </nav>
+    <div class="center"><br>
+        <div class="search"><i class="fas fa-search" style="color: rgb(240, 62, 115); font-size: 15px;"></i>&nbsp;어디로 여행가세요?</div>
+        <img src="./img/box1.png" width="90%" >
+        <h1>어디든 상관없이<br>
+            떠나고 싶을 때<br>
+            에어비앤비가 도와드립니다!<br><br>
+            <button class="search_btn">유연한 검색</button>
+        </h1>
+
+    </div>
+    
+    
+</div>
+
+    <div class="box2">
+        <h1 class="h1">
+            설레는 다음 여행을 위한 아이디어
+        </h1>
+        <div class="box2_1"><img src="./img/1.png" style="border-radius: 10%;">
+        <h2>서울</h2>
+        <p style="color: white;">112km 거리</p>
+        </div>
+        <div class="box2_2"><img src="./img/2.png"> 박스2</div>
+        <div class="box2_3"><img src="./img/3.png"></div>
+        <div class="box2_4"><img src="./img/4.png"></div>
+
+    </div>
+</body>
+</html>
